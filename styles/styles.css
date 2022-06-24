@@ -1,0 +1,32 @@
+
+
+
+body{
+    background-color: black;
+}
+.text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size:60px;
+    -webkit-text-stroke: 1px #eee;
+    color: transparent;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.text::before{
+    content:attr(data-text);
+    position: absolute;
+    top:0;left:0;
+    color: #ff7a00;
+    -webkit-text-stroke: 3px #ff7a00 ;
+    width:1px;
+    white-space:nowrap;
+    overflow:hidden;
+    border-right:3px linen #ff7a00;
+    animation:text-fill 2s ease-in-out alternate infinite;
+}
+
+@keyframes text-fill {
+    100% { width:100%; }
+}
